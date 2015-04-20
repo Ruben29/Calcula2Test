@@ -13,24 +13,53 @@ public class Calcula2 {
      */
     public static void main(String[] args) {
 
+        Modelo contenedor = new Modelo();
+
+        float num1 = Float.parseFloat(JOptionPane.showInputDialog("Número 1"));
+        contenedor.setNum1(num1);
+
+        float num2 = Float.parseFloat(JOptionPane.showInputDialog("Número 2"));
+        contenedor.setNum2(num2);
+
+        int operacion = Integer.parseInt(JOptionPane.showInputDialog("Introduzca lo que desea hacer:"
+                + "\n 1- Sumar"
+                + "\n 2- Restar"
+                + "\n 3- Multiplicar"
+                + "\n 4- Dividir"
+                + "\n 5- Salir"));
+
+        contenedor.setOperacion(operacion);
+
+        float resul = realizarOperacion(contenedor.getNum1(), contenedor.getNum2(), contenedor.getOperacion());
+        contenedor.setResultado(resul);
+
+        Vista.Imprimir(contenedor);
+
     }
 
-    public float realizaOperacion(Modelo contenedor) {
+    public static float realizarOperacion(float num1, float num2, int op) {
 
         float resultado = 0;
 
-        if (contenedor.operacion.equals("suma")) {
+        switch (op) {
 
-            contenedor.resultado = contenedor.num1 + contenedor.num2;
+            case 1:
+                resultado = (num1 + num2);
+                break;
+            case 2:
+                resultado = (num1 - num2);
+                break;
+            case 3:
+                resultado = (num1 * num2);
+                break;
+            case 4:
+                resultado = (num1 / num2);
+                break;
 
-        } else if (contenedor.operacion.equals("resta")) {
-
-        } else if (contenedor.operacion.equals("multiplicacion")) {
-
-        } else if (contenedor.operacion.equals("division")) {
-
+            default:
+                JOptionPane.showMessageDialog(null, "Introduzca una opcion valida");
+                break;
         }
-
         return resultado;
 
     }
