@@ -8,10 +8,10 @@ import javax.swing.JOptionPane;
  */
 public class Vista {
 
-    public static void Imprimir(float resultado) {
-               
-        JOptionPane.showMessageDialog(null, "El resultado de la operaicón es: " + resultado);
-        
+    public static void Imprimir(Modelo res) {
+
+        JOptionPane.showMessageDialog(null, res.num1 + " " + res.operacion + " " + res.num2 + " = " + res.resultado);
+
     }
 
 }
