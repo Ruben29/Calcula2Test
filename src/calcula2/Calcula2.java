@@ -33,7 +33,15 @@ public class Calcula2 {
         float resul = realizarOperacion(contenedor.getNum1(), contenedor.getNum2(), contenedor.getOperacion());
         contenedor.setResultado(resul);
 
-        Vista.Imprimir(contenedor);
+        Vista.imprimir(contenedor);
+                
+        Vista.introducir(contenedor);
+        
+        
+        contenedor.setResultado(realizarOperacion(contenedor.getNum1(), contenedor.getNum2(), contenedor.getOperacion()));
+
+        
+        Vista.imprimir(contenedor);
 
     }
 

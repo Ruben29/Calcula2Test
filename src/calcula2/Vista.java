@@ -8,9 +8,17 @@ import javax.swing.JOptionPane;
  */
 public class Vista {
 
-    public static void Imprimir(Modelo res) {
+    public static void imprimir(Modelo res) {
 
         JOptionPane.showMessageDialog(null, res.getResultado());
+
+    }
+
+    public static void introducir(Modelo contenedor) {
+
+        contenedor.getNum1();
+        contenedor.getNum2();
+        contenedor.getOperacion();
 
     }
 
