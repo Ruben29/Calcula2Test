@@ -63,7 +63,8 @@ public class Calcula2 {
             case 4:
                 resultado = (num1 / num2);
                 break;
-
+            case 5:
+                System.exit(op);
             default:
                 JOptionPane.showMessageDialog(null, "Introduzca una opcion valida");
                 break;
