@@ -31,7 +31,8 @@ public class Calcula2 {
         contenedor.setOperacion(operacion);
 
         float resul = realizarOperacion(contenedor.getNum1(), contenedor.getNum2(), contenedor.getOperacion());
-        contenedor.setResultado(resul);
+       
+ contenedor.setResultado(resul);
 
         Vista.imprimir(contenedor);
                 
@@ -41,8 +42,6 @@ public class Calcula2 {
         contenedor.setResultado(realizarOperacion(contenedor.getNum1(), contenedor.getNum2(), contenedor.getOperacion()));
 
         
-        Vista.imprimir(contenedor);
-
     }
 
     public static float realizarOperacion(float num1, float num2, int op) {
