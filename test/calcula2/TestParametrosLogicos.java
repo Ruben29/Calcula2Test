@@ -52,3 +52,4 @@ public class TestParametrosLogicos {
         assertEquals(res, Controlador.realizaOperacion(contenedor), 0.0);
     }
 }
+

@@ -16,9 +16,9 @@ import static org.junit.Assert.*;
  *
  * @author rfernandezgonzalez
  */
-public class Calcula2Test {
+public class TestLogicos {
 
-    public Calcula2Test() {
+    public TestLogicos() {
     }
 
     @BeforeClass
@@ -37,9 +37,7 @@ public class Calcula2Test {
     public void tearDown() {
     }
 
-    /**
-     * Test of main method, of class Calcula2.
-     */
+    
     /**
      * Test of realizarOperacion method, of class Calcula2.
      */
@@ -77,7 +75,7 @@ public class Calcula2Test {
     public void testRealizarOperacionMultiplicar() {
 
         System.out.println("realizaOperacion");
-        Modelo mod = new Modelo(5, 5, 1, 10);
+        Modelo mod = new Modelo(5, 3, 1, 10);
         Controlador instance = new Controlador();
         float expResult = 10.0F;
         float result = instance.realizaOperacion(mod);
@@ -101,3 +99,4 @@ public class Calcula2Test {
 
     }
 }
+
