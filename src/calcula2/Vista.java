@@ -8,19 +8,24 @@ import javax.swing.JOptionPane;
  */
 public class Vista {
 
-    public static void imprimir(Modelo res) {
+    public void introducir(Modelo contenedor) {
 
-        JOptionPane.showMessageDialog(null, res.getResultado());
+        int num1 = Integer.parseInt(JOptionPane.showInputDialog("Inserta el primer numero del operando"));
+        contenedor.setNum1(num1);
+        int num2 = Integer.parseInt(JOptionPane.showInputDialog("Inserta el segundo numero del operando"));
+        contenedor.setNum2(num2);
+        int operacion = Integer.parseInt(JOptionPane.showInputDialog("Que operacion quieres hacer?\n"
+                + "1-Suma\n"
+                + "2-Resta\n"
+                + "3-Multiplicacion\n"
+                + "4-Division\n"
+                + "5-Salir"));
+        contenedor.setOperacion(operacion);
 
     }
 
-    public static void introducir(Modelo contenedor) {
+    public void imprimir(Modelo mod) {
 
-        contenedor.getNum1();
-        contenedor.getNum2();
-        contenedor.getOperacion();
-        
-
+        JOptionPane.showMessageDialog(null, "Primer numero: " + mod.getNum1() + "\nSegundo numero: " + mod.getNum2() + " \nOperacion: " + mod.getOperacion() + "\nResultado: " + mod.resultado);
     }
-
 }
