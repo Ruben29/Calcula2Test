@@ -29,3 +29,4 @@ public class Vista {
         JOptionPane.showMessageDialog(null, "Primer numero: " + mod.getNum1() + "\nSegundo numero: " + mod.getNum2() + " \nOperacion: " + mod.getOperacion() + "\nResultado: " + mod.resultado);
     }
 }
+
