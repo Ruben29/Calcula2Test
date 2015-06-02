@@ -19,6 +19,7 @@ public class Vista {
         contenedor.getNum1();
         contenedor.getNum2();
         contenedor.getOperacion();
+        
 
     }
 
